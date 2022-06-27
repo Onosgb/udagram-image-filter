@@ -34,7 +34,9 @@ import { filterImageFromURL, deleteLocalFiles } from "./util/util";
   // Root Endpoint
   // Displays a simple message to the user
   app.get("/", async (req, res) => {
-    res.send("try GET /filteredimage?image_url={{}}");
+    res.send(
+      "try GET http://udagram-image-filter-dev22222.us-east-1.elasticbeanstalk.com/filteredimage?image_url={{}}"
+    );
   });
 
   app.get("/filteredimage", async (req: Request, res: Response) => {
@@ -49,7 +51,9 @@ import { filterImageFromURL, deleteLocalFiles } from "./util/util";
 
   // Start the Server
   app.listen(port, () => {
-    console.log(`server running http://localhost:${port}`);
+    if (process.env.NODE_ENV !== "production") {
+      console.log(`server running http://localhost:${port}`);
+    }
     console.log(`press CTRL+C to stop server`);
   });
 })();
