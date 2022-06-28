@@ -6,12 +6,12 @@
   },
   "item": [
     {
-      "name": "http://udagram-image-filter-dev22222.us-east-1.elasticbeanstalk.com/filteredImage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg",
+      "name": "http://localhost:8082/filteredimage?image_url=https://timedotcom.files.wordpress.com/2019/03/kitten-report.jpg",
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://udagram-image-filter-dev22222.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://timedotcom.files.wordpress.com/2019/03/kitten-report.jpg",
+          "raw": "http://{{HOST}}/filteredimage?image_url=https://timedotcom.files.wordpress.com/2019/03/kitten-report.jpg",
           "protocol": "http",
           "host": ["{{HOST}}"],
           "path": ["filteredimage"],
